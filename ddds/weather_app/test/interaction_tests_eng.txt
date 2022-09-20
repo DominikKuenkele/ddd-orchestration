@@ -1,0 +1,22 @@
+--- main menu
+U> what is the temperature
+S> What city?
+U> London
+S> What country?
+U> UK
+S> The temperature is * degrees.
+--- asking the temperature (incremental)
+U> I want to know the temperature
+S> What city?
+U> London
+S> What country?
+U> UK
+S> The temperature is * degrees.
+--- asking the temperature (one-shot)
+U> What is the temperature in Gothenburg Sweden
+S> The temperature is * degrees.
+--- asking the temperature (overanswering)
+U> can you tell me about the temperature
+S> What city?
+U> Gothenburg Sweden
+S> The temperature is * degrees.
