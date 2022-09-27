@@ -1,22 +1,76 @@
---- main menu
+--- asking the temperature (incremental)
+S> Do you want to know about the temperature or know the current weather?
 U> what is the temperature
 S> What city?
-U> London
+U> in the city Wuppertal
 S> What country?
-U> UK
+U> in the country Germany
 S> The temperature is * degrees.
 --- asking the temperature (incremental)
+S> Do you want to know about the temperature or know the current weather?
 U> I want to know the temperature
 S> What city?
-U> London
+U> in the city Wuppertal
 S> What country?
-U> UK
+U> in the country Germany
 S> The temperature is * degrees.
 --- asking the temperature (one-shot)
-U> What is the temperature in Gothenburg Sweden
+S> Do you want to know about the temperature or know the current weather?
+U> What is the temperature in Gothenburg in the country Sweden
 S> The temperature is * degrees.
 --- asking the temperature (overanswering)
+S> Do you want to know about the temperature or know the current weather?
 U> can you tell me about the temperature
 S> What city?
-U> Gothenburg Sweden
+U> in Gothenburg in the country Sweden
+S> The temperature is * degrees.
+--- asking the temperature and imperial (incremental)
+S> Do you want to know about the temperature or know the current weather?
+U> I want to know the temperature in degrees fahrenheit
+S> What city?
+U> in the city Wuppertal
+S> What country?
+U> in the country Germany
+S> The temperature is * degrees.
+--- asking the temperature and unit (incremental)
+S> Do you want to know about the temperature or know the current weather?
+U> I want to know the temperature in kelvin
+S> What city?
+U> in the city Wuppertal
+S> What country?
+U> in the country Germany
+S> The temperature is * degrees.
+
+--- asking the weather
+S> Do you want to know about the temperature or know the current weather?
+U> what is the weather
+S> What city?
+U> in the city Wuppertal
+S> What country?
+U> in the country Germany
+S> We have *
+--- asking the weather (incremental)
+S> Do you want to know about the temperature or know the current weather?
+U> I want to know the weather
+S> What city?
+U> in the city Wuppertal
+S> What country?
+U> in the country Germany
+S> We have *
+--- asking the weather (one-shot)
+S> Do you want to know about the temperature or know the current weather?
+U> What is the weather in Gothenburg in the country Sweden
+S> We have *
+--- asking the weather (overanswering)
+S> Do you want to know about the temperature or know the current weather?
+U> can you tell me about the weather
+S> What city?
+U> in Gothenburg in the country Sweden
+S> We have *
+
+--- asking the temperature mispelled
+S> Do you want to know about the temperature or know the current weather?
+U> What is the temperature in Melbourne?
+S> What country?
+U> in the country Australia
 S> The temperature is * degrees.

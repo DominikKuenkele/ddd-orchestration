@@ -2,13 +2,22 @@
 <ontology name="WeatherAppOntology">
     <sort name="city" dynamic="true"/>
     <sort name="country" dynamic="true"/>
+    <sort name="unit"/>
 
     <predicate name="city_to_search" sort="city"/>
     <predicate name="country_to_search" sort="country"/>
+    <predicate name="unit_to_use" sort="unit"/>
     <predicate name="temperature" sort="string"/>
+    <predicate name="weather" sort="string"/>
+
     
-    <individual name="london" sort="city"/>
-    <individual name="uk" sort="country"/>
     <individual name="gothenburg" sort="city"/>
+    <individual name="london" sort="city"/>
+
+    <individual name="uk" sort="country"/>
     <individual name="sweden" sort="country"/>
+
+    <individual name="metric" sort="unit"/>
+    <individual name="standard" sort="unit"/>
+    <individual name="imperial" sort="unit"/>
 </ontology>

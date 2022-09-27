@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <grammar>
+  <!-- ACTIONS -->
   <action name="top">
     <one-of>
       <item>main menu</item>
@@ -20,26 +21,95 @@
     </one-of>
   </action>
 
+  <!-- TOPICS -->
+  <question speaker="all" predicate="temperature">
+    about the temperature
+  </question>
+
+  <question speaker="all" predicate="weather">
+    the current weather
+  </question>
+
+  <!-- USER QUESTIONS -->
   <question speaker="user" predicate="temperature" type="wh_question">
     <one-of>
       <item>What is the temperature</item>
       <item>I want to know the temperature</item>
       <item>can you tell me about the temperature</item>
-      <item>What is the temperature in <slot predicate="city_to_search"/> <slot predicate="country_to_search"/></item>
+      <item>I want to know the temperature in <slot predicate="unit_to_use"/></item>
+      <item>What is the temperature in <slot predicate="city_to_search"/> in the country <slot predicate="country_to_search"/></item>
+      <item>can you give me the temperature</item>
+      <item>how warm is it in <slot predicate="city_to_search"/></item>
+      <item>I want to know the temperature in <slot predicate="city_to_search"/></item>
+      <item>is it warm in <slot predicate="city_to_search"/></item>
+      <item>how many degrees do we have in <slot predicate="city_to_search"/></item>
+      <item>is it cold in <slot predicate="city_to_search"/></item>
+      <item>how many <slot predicate="unit_to_use"/> do we have in <slot predicate="city_to_search"/></item>
+      <item>can you give me the temperature in <slot predicate="unit_to_use"/></item>
     </one-of>
   </question>
 
+  <question speaker="user" predicate="weather" type="wh_question">
+    <one-of>
+      <item>What is the weather</item>
+      <item>I want to know the weather</item>
+      <item>can you tell me about the weather</item>
+      <item>What is the weather in <slot predicate="city_to_search"/> in the country <slot predicate="country_to_search"/></item>
+      <item>I want to know the weather in <slot predicate="city_to_search"/></item>
+      <item>how is the weather in <slot predicate="city_to_search"/></item>
+      <item>is the weather in <slot predicate="city_to_search"/> good?</item>
+      <item>can you tell me about the weather <slot predicate="city_to_search"/></item>
+      <item>are there clouds in <slot predicate="city_to_search"/></item>
+      <item>do we have a blue sky</item>
+      <item>is there a blue sky in <slot predicate="city_to_search"/></item>
+    </one-of>
+  </question>
+
+  <!-- USER ANSWERS -->
+  <answer speaker="user">
+    <one-of>
+      <item>in <slot sort="city"/> in the country <slot sort="country"/></item>
+      <item>in the city <slot sort="city"/></item>
+      <item>in the country <slot sort="country"/></item>
+    </one-of>
+  </answer>
+
+  <!-- SYSTEM QUESTIONS -->
   <question speaker="system" predicate="city_to_search">What city</question>
   <question speaker="system" predicate="country_to_search">What country</question>
 
+  <!-- SYSTEM ANSWERS -->
   <answer speaker="system" predicate="temperature">The temperature is <slot predicate="temperature"/> degrees</answer>
+  <answer speaker="system" predicate="weather">We have <slot predicate="weather"/></answer>
 
-  <answer speaker="user">
-    <slot sort="city"/> <slot sort="country"/>
-  </answer>
 
+  <!-- INDIVIDUALS -->
   <individual name="london">London</individual>
-  <individual name="uk">UK</individual>
   <individual name="gothenburg">Gothenburg</individual>
+
+  <individual name="uk">UK</individual>
   <individual name="sweden">Sweden</individual>
+
+  <individual name="metric">
+    <one-of>
+      <item>metric</item>
+      <item>celsius</item>
+      <item>degrees celcius</item>
+    </one-of>
+  </individual>
+
+  <individual name="standard">
+    <one-of>
+      <item>standard</item>
+      <item>kelvin</item>
+    </one-of>
+  </individual>
+
+  <individual name="imperial">
+    <one-of>
+      <item>imperial</item>
+      <item>fahrenheit</item>
+      <item>degrees fahrenheit</item>
+    </one-of>
+  </individual>
 </grammar>

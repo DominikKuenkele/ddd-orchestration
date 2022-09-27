@@ -153,18 +153,36 @@ def action_success_response():
     )
     return response
 
+def retrieveParameters():
+    facts = request.get_json()["context"]["facts"]
+    print(facts)
+    city = facts["city_to_search"]["grammar_entry"]
+    country = facts["country_to_search"]["grammar_entry"]
+    unit = facts["unit_to_use"]["grammar_entry"] if "unit_to_use" in facts else "metric" 
+
+    return city, country, unit
+
 def get_current_data(city, country, unit="metric"):
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city},{country}&units={unit}&appid={API_KEY}"
+    print(url)
     response = requests.get(url)
     data = response.json()
     return data
 
 @app.route("/get_temperature", methods=['POST'])
 def get_temperature():
-    payload = request.get_json()
-    city = payload["context"]["facts"]["city_to_search"]["value"]
-    country = payload["context"]["facts"]["country_to_search"]["value"]
+    city, country, unit = retrieveParameters()
+    api_response = get_current_data(city, country, unit)
+    temperature = str(api_response['main']['temp'])
+    print(temperature)
+    return query_response(value=temperature, grammar_entry=None)
+
+
+@app.route("/get_weather", methods=['POST'])
+def get_weather():
+    city, country, _ = retrieveParameters()
     
     api_response = get_current_data(city, country)
-    temperature = str(api_response['main']['temp'])
-    return query_response(value=temperature, grammar_entry=None)
+    weather = str(api_response['weather'][0]['description'])
+    print(weather)
+    return query_response(value=weather, grammar_entry=None)
