@@ -132,3 +132,7 @@ dmypy.json
 grammar/build/
 .tala/
 logs/
+<<<<<<< HEAD
+=======
+.idea/
+>>>>>>> upstream/main
