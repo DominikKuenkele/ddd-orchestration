@@ -21,4 +21,10 @@
     </one-of>
   </action>
 
+  <action name="omelette_recipe">
+    <one-of>
+      <item>I want to prepare a French omelette</item>
+    </one-of>
+  </action>
+
 </grammar>
