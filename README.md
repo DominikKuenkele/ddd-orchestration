@@ -1,5 +1,8 @@
-# Dialogue Systems 2 - ddd-orchestration
+# Dialogue Systems 2 - lab 2
+## Problems
+The Rasa entity extaction didn't really work well. Cities were often recognized as countries or the other way round. I tried to counter that by using the utterances "in the city ..." or "in the country ..." but that didn't help much. In the end I used specific cities and countries in the interaction test that worked well.
 
-Baseline orchestration files prepared for the Dialogue Systems 2 course in the Master in Language Technology of the University of Gothenburg.
+Furthermore, I got problems, when using the Rasa pipeline *http://pipeline/interact* instead of the normal TDM  *http://tdm/interact*. When I use it, the answer of the system in the grammar file is completely ignored and the system just responds with the data it got back from the API. Using the *nlg.json* fixes the problem only partially, since it now matches **all** the answers with the *temperature*  and never uses the match of the *weather*. I believe, this is a bug in TDM.
 
-Students can fork this repository (changing the name to the name of the project or lab) or download a zip copy.
+## Suggestions
+In some cases, I am really struggelling to understand, how TDM works. The documentation is not giving any hints for many problems. For example, the <alt>-tag leads to Not-Found-Error in the docs. So, we couldn't find any help, how it works and is connected to the grammar, ontology or any other files. The same goes for e.g. the <findout>-tags or the <action>s (mostly lab 3) and many more. It would be really helpful, to have a complete documentation or maybe even access to the source code, to also be able to use the full capabilties of TDM. 
