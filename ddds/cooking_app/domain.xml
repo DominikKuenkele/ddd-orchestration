@@ -14,6 +14,18 @@
       <get_done action="add_eggs"/>
       <get_done action="fold_omelette"/>
       <get_done action="serve"/>
+      <signal_action_completion/>
+    </plan>
+  </goal>
+
+  <goal type="perform" action="fries_recipe">
+    <plan>
+      <get_done action="preheat_oven"/>
+      <get_done action="cut_potatoes"/>
+      <get_done action="season_potatoes"/>
+      <get_done action="spread_potatoes"/>
+      <get_done action="bake_potatoes"/>
+      <signal_action_completion/>
     </plan>
   </goal>
 </domain>

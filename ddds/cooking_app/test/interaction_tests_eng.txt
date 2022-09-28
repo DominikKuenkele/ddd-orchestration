@@ -12,3 +12,18 @@ U> done
 S> After a few seconds, transfer the omelette onto a plate.
 U> done
 S> Amazing! You have finished preparing a French omelette. Bon appétit!
+
+--- cooking fries
+S> What would you like to do?
+U> I want to make fries
+S> Preheat the oven to 230 degrees.
+U> done
+S> Scrub potatoes well and cut into 1 cm thick fries.
+U> done
+S> In a large mixing bowl, toss potatoes with oil, sugar, salt and red pepper.
+U> done
+S> Spread on baking sheet in one layer.
+U> done
+S> Bake for 30 minutes in the preheated oven, until potatoes are tender and browned.
+U> done
+S> Good job! You should server and eat it as long as it is warm!

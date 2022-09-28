@@ -1,6 +1,24 @@
 version: "2.0"
 
 nlu:
+- intent: action::fries_recipe
+  examples: |
+    - I want to make fries
+    - french fries
+    - chips
+    - Can you show me, how to make fries
+    - I would like to do fries
+    - baked potatoes
+
+- intent: action::omelette_recipe
+  examples: |
+    - I want to prepare a French omelette
+    - I would like to do a French omelette
+    - a French omelette
+    - French omelette
+    - Give me the instructions for a French omelette
+    - an omelette
+
 - intent: NEGATIVE
   examples: |
     - aboard

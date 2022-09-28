@@ -24,6 +24,22 @@
   <action name="omelette_recipe">
     <one-of>
       <item>I want to prepare a French omelette</item>
+      <item>I would like to do a French omelette</item>
+      <item>a French omelette</item>
+      <item>French omelette</item>
+      <item>Give me the instructions for a French omelette</item>
+      <item>an omelette</item>
+    </one-of>
+  </action>
+
+  <action name="fries_recipe">
+    <one-of>
+      <item>I want to make fries</item>
+      <item>french fries</item>
+      <item>chips</item>
+      <item>Can you show me, how to make fries</item>
+      <item>I would like to do fries</item>
+      <item>baked potatoes</item>
     </one-of>
   </action>
 

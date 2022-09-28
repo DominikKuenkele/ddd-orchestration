@@ -1,26 +1,50 @@
 [
     {
         "match": "request(whisk_eggs)",
-        "utterance": "Crack three eggs on a bowl and whisk with a pinch of salt"
+        "utterance": "Crack three eggs on a bowl and whisk with a pinch of salt."
     },
     {
         "match": "request(heat_butter)",
-        "utterance": "Heat butter or oil on a pan on high heat"
+        "utterance": "Heat butter or oil on a pan on high heat."
     },
     {
         "match": "request(add_eggs)",
-        "utterance": "Add the egg mixture to the pan and stir the eggs for about 30 seconds"
+        "utterance": "Add the egg mixture to the pan and stir the eggs for about 30 seconds."
     },
     {
         "match": "request(fold_omelette)",
-        "utterance": "When the eggs are set but look slightly wet, turn off the heat and fold the omelette"
+        "utterance": "When the eggs are set but look slightly wet, turn off the heat and fold the omelette."
     },
     {
         "match": "request(serve)",
-        "utterance": "After a few seconds, transfer the omelette onto a plate"
+        "utterance": "After a few seconds, transfer the omelette onto a plate."
     },
     {
-        "match": "report(action_status(omelette, done))",
+        "match": "report(action_status(omelette_recipe, done))",
         "utterance": "Amazing! You have finished preparing a French omelette. Bon appétit!"
+    },
+    {
+        "match": "request(preheat_oven)",
+        "utterance": "Preheat the oven to 230 degrees."
+    },
+    {
+        "match": "request(cut_potatoes)",
+        "utterance": "Scrub potatoes well and cut into 1 cm thick fries."
+    },
+    {
+        "match": "request(season_potatoes)",
+        "utterance": "In a large mixing bowl, toss potatoes with oil, sugar, salt and red pepper."
+    },
+    {
+        "match": "request(spread_potatoes)",
+        "utterance": "Spread on baking sheet in one layer."
+    },
+    {
+        "match": "request(bake_potatoes)",
+        "utterance": "Bake for 30 minutes in the preheated oven, until potatoes are tender and browned."
+    },
+    {
+        "match": "report(action_status(fries_recipe, done))",
+        "utterance": "Good job! You should server and eat it as long as it is warm!"
     }
 ]
