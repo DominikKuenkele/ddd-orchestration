@@ -15,6 +15,14 @@ def jsonfilter(value):
 
 environment.filters["json"] = jsonfilter
 
+AMOUNTS = {
+  "omelette_recipe": {
+    "butter": "one tablespoon"
+  },
+  "fries_recipe": {
+    
+  }
+}
 
 def error_response(message):
     response_template = environment.from_string("""
@@ -149,3 +157,20 @@ def action_success_response():
         mimetype='application/json'
     )
     return response
+
+def retrieveParameters():
+    facts = request.get_json()["context"]["facts"]
+    print(facts)
+    current_recipe = facts["current_recipe"]["grammar_entry"]
+    ingredient = facts["ingredient"]["grammar_entry"]
+
+    return current_recipe, ingredient, 
+
+@app.route("/get_amount_of_ingredient", methods=['POST'])
+def get_amount_of_ingredient():
+    print('test2')
+    current_recipe, ingredient, _ = retrieveParameters()
+    
+    amount = AMOUNTS[current_recipe][ingredient]
+    print(amount)
+    return query_response(value=amount, grammar_entry=None)

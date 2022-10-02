@@ -1,7 +1,7 @@
 version: "2.0"
 
 nlu:
-- intent: action::fries_recipe
+- intent: action::fries_recipe_action
   examples: |
     - I want to make fries
     - french fries
@@ -10,7 +10,7 @@ nlu:
     - I would like to do fries
     - baked potatoes
 
-- intent: action::omelette_recipe
+- intent: action::omelette_recipe_action
   examples: |
     - I want to prepare a French omelette
     - I would like to do a French omelette
@@ -18,6 +18,42 @@ nlu:
     - French omelette
     - Give me the instructions for a French omelette
     - an omelette
+
+- intent: question::amount_ingredient
+  examples: |
+    - How much [butter]{"entity": "sort.ingredient", "value": "individual.butter"} should I use
+    - How much [egg]{"entity": "sort.ingredient", "value": "individual.egg"} should I use
+    - How much
+    - A lot
+    - What is the amount
+
+- intent: answer
+  examples: |
+    - [single](sort.string)
+    - [double word](sort.string)
+    - [three in one](sort.string)
+    - [hey make it four](sort.string)
+    - [the more the merrier five](sort.string)
+    - [calm down and count to six](sort.string)
+    - [bring them through to the jolly seven](sort.string)
+    - [noone counts toes like an eight toed guy](sort.string)
+    - [it matters to make sense for nine of us](sort.string)
+    - [would you bring ten or none to a desert island](sort.string)
+    - [omelette recipe]{"entity": "sort.recipe", "value": "individual.omelette_recipe"}
+    - [fries recipe]{"entity": "sort.recipe", "value": "individual.fries_recipe"}
+    - [butter]{"entity": "sort.ingredient", "value": "individual.butter"}
+    - [egg]{"entity": "sort.ingredient", "value": "individual.egg"}
+    - yes [single](sort.string)
+    - yes [omelette recipe]{"entity": "sort.recipe", "value": "individual.omelette_recipe"}
+    - no [double word](sort.string)
+    - no [fries recipe]{"entity": "sort.recipe", "value": "individual.fries_recipe"}
+
+- intent: answer_negation
+  examples: |
+    - not [omelette recipe]{"entity": "sort.recipe", "value": "individual.omelette_recipe"}
+    - not [fries recipe]{"entity": "sort.recipe", "value": "individual.fries_recipe"}
+    - not [butter]{"entity": "sort.ingredient", "value": "individual.butter"}
+    - not [egg]{"entity": "sort.ingredient", "value": "individual.egg"}
 
 - intent: NEGATIVE
   examples: |

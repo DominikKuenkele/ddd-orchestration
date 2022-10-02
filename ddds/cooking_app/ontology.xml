@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ontology name="CookingAppOntology">
-    <action name="omelette_recipe"/>
-    <action name="fries_recipe"/>
-    
-    <action name="whisk_eggs"/>
-    <action name="heat_butter"/>
-    <action name="add_eggs"/>
-    <action name="fold_omelette"/>
-    <action name="serve"/>
+  <action name="omelette_recipe_action"/>
+  <action name="fries_recipe_action"/>
 
-    <action name="preheat_oven"/>
-    <action name="cut_potatoes"/>
-    <action name="season_potatoes"/>
-    <action name="spread_potatoes"/>
-    <action name="bake_potatoes"/>
+  <sort name="recipe"/>
+  <sort name="ingredient" dynamic="true"/>
+
+  <predicate name="current_recipe" sort="recipe"/>
+  <predicate name="which_ingredient" sort="ingredient"/>
+  <predicate name="amount_ingredient" sort="string"/>
+
+  <individual name="butter" sort="ingredient"/>
+  <individual name="egg" sort="ingredient"/>
+
+  <individual name="omelette_recipe" sort="recipe"/>
+  <individual name="fries_recipe" sort="recipe"/>
 </ontology>

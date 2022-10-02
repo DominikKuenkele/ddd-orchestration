@@ -21,7 +21,7 @@
     </one-of>
   </action>
 
-  <action name="omelette_recipe">
+  <action name="omelette_recipe_action">
     <one-of>
       <item>I want to prepare a French omelette</item>
       <item>I would like to do a French omelette</item>
@@ -32,7 +32,7 @@
     </one-of>
   </action>
 
-  <action name="fries_recipe">
+  <action name="fries_recipe_action">
     <one-of>
       <item>I want to make fries</item>
       <item>french fries</item>
@@ -43,4 +43,19 @@
     </one-of>
   </action>
 
+  <question speaker="user" type="wh_question" predicate="amount_ingredient">
+    <one-of>
+      <item>How much <slot predicate="which_ingredient"/> should I use</item>
+      <item>How much</item>
+      <item>A lot</item>
+      <item>What is the amount</item>
+    </one-of>
+  </question>
+
+  <answer speaker="system" predicate="amount_ingredient"><slot predicate="amount_ingredient"/> is fine</answer>
+
+  <individual name="butter">butter</individual>
+  <individual name="egg">egg</individual>
+  <individual name="omelette_recipe">omelette recipe</individual>
+  <individual name="fries_recipe">fries recipe</individual>
 </grammar>

@@ -7,8 +7,14 @@
     </plan>
   </goal>
 
-  <goal type="perform" action="omelette_recipe">
+  <goal type="perform" action="omelette_recipe_action">
     <plan>
+      <assume_shared>
+        <proposition predicate="current_recipe" value="omelette_recipe"/>
+      </assume_shared>
+      <assume_shared>
+        <proposition predicate="which_ingredient" value="egg"/>
+      </assume_shared>
       <get_done action="whisk_eggs"/>
       <get_done action="heat_butter"/>
       <get_done action="add_eggs"/>
@@ -18,14 +24,23 @@
     </plan>
   </goal>
 
-  <goal type="perform" action="fries_recipe">
+  <goal type="perform" action="fries_recipe_action">
     <plan>
+      <assume_shared>
+        <proposition predicate="current_recipe" value="fries_recipe"/>
+      </assume_shared>
       <get_done action="preheat_oven"/>
       <get_done action="cut_potatoes"/>
       <get_done action="season_potatoes"/>
       <get_done action="spread_potatoes"/>
       <get_done action="bake_potatoes"/>
       <signal_action_completion/>
+    </plan>
+  </goal>
+
+  <goal type="resolve" question_type="wh_question" predicate="amount_ingredient">
+    <plan>
+      <invoke_service_query type="wh_question" predicate="amount_ingredient"/>
     </plan>
   </goal>
 </domain>
