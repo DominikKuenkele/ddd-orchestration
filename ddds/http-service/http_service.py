@@ -20,7 +20,7 @@ AMOUNTS = {
     "butter": "one tablespoon"
   },
   "fries_recipe": {
-    
+    "potato": "two potatoes per person"
   }
 }
 
@@ -161,15 +161,14 @@ def action_success_response():
 def retrieveParameters():
     facts = request.get_json()["context"]["facts"]
     print(facts)
-    current_recipe = facts["current_recipe"]["grammar_entry"]
-    ingredient = facts["ingredient"]["grammar_entry"]
+    current_recipe = facts["current_recipe"]["value"]
+    ingredient = facts["which_ingredient"]["value"]
 
     return current_recipe, ingredient, 
 
 @app.route("/get_amount_of_ingredient", methods=['POST'])
 def get_amount_of_ingredient():
-    print('test2')
-    current_recipe, ingredient, _ = retrieveParameters()
+    current_recipe, ingredient = retrieveParameters()
     
     amount = AMOUNTS[current_recipe][ingredient]
     print(amount)

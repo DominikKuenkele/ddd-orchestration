@@ -46,5 +46,25 @@
     {
         "match": "report(action_status(fries_recipe_action, done))",
         "utterance": "Good job! You should server and eat it as long as it is warm!"
+    },
+    {
+        "match": "answer(amount_ingredient(&individual))",
+        "utterance": "Around &individual."
+    },
+    {
+        "match": "request(stir_eggs)",
+        "utterance": "Hold a fork flat on the pan and stir the eggs thoroughly with one hand while shaking the pan back and forth with the other."
+    },
+    {
+        "match": "request(turn_knob)",
+        "utterance": "Turn the knob of the oven, until you reach the temperature."
+    },
+    {
+        "match": "report(action_status(preheat_oven, done))",
+        "utterance": "Now you have set the temperature."
+    },
+    {
+        "match": "report(action_status(add_eggs, done))",
+        "utterance": "Keep incorporating the set edges into the runny center. This takes just 25 to 30 seconds."
     }
 ]

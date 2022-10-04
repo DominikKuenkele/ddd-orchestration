@@ -2,6 +2,8 @@
 <ontology name="CookingAppOntology">
   <action name="omelette_recipe_action"/>
   <action name="fries_recipe_action"/>
+  <action name="add_eggs"/>
+  <action name="preheat_oven"/>
 
   <sort name="recipe"/>
   <sort name="ingredient" dynamic="true"/>
@@ -11,7 +13,7 @@
   <predicate name="amount_ingredient" sort="string"/>
 
   <individual name="butter" sort="ingredient"/>
-  <individual name="egg" sort="ingredient"/>
+  <individual name="potato" sort="ingredient"/>
 
   <individual name="omelette_recipe" sort="recipe"/>
   <individual name="fries_recipe" sort="recipe"/>

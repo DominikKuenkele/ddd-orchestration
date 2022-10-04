@@ -44,7 +44,11 @@ nlu:
 - intent: question::amount_ingredient
   examples: |
     - How much [butter]{"entity": "sort.ingredient", "value": "individual.butter"} should I use
-    - How much [egg]{"entity": "sort.ingredient", "value": "individual.egg"} should I use
+    - How much [potato]{"entity": "sort.ingredient", "value": "individual.potato"} should I use
+    - How much [potatoes]{"entity": "sort.ingredient", "value": "individual.potato"} should I use
+    - How many [butter]{"entity": "sort.ingredient", "value": "individual.butter"}
+    - How many [potato]{"entity": "sort.ingredient", "value": "individual.potato"}
+    - How many [potatoes]{"entity": "sort.ingredient", "value": "individual.potato"}
     - How much
     - A lot
     - What is the amount
@@ -64,7 +68,8 @@ nlu:
     - [omelette recipe]{"entity": "sort.recipe", "value": "individual.omelette_recipe"}
     - [fries recipe]{"entity": "sort.recipe", "value": "individual.fries_recipe"}
     - [butter]{"entity": "sort.ingredient", "value": "individual.butter"}
-    - [egg]{"entity": "sort.ingredient", "value": "individual.egg"}
+    - [potato]{"entity": "sort.ingredient", "value": "individual.potato"}
+    - [potatoes]{"entity": "sort.ingredient", "value": "individual.potato"}
     - yes [single](sort.string)
     - yes [omelette recipe]{"entity": "sort.recipe", "value": "individual.omelette_recipe"}
     - no [double word](sort.string)
@@ -75,7 +80,8 @@ nlu:
     - not [omelette recipe]{"entity": "sort.recipe", "value": "individual.omelette_recipe"}
     - not [fries recipe]{"entity": "sort.recipe", "value": "individual.fries_recipe"}
     - not [butter]{"entity": "sort.ingredient", "value": "individual.butter"}
-    - not [egg]{"entity": "sort.ingredient", "value": "individual.egg"}
+    - not [potato]{"entity": "sort.ingredient", "value": "individual.potato"}
+    - not [potatoes]{"entity": "sort.ingredient", "value": "individual.potato"}
 
 - intent: NEGATIVE
   examples: |

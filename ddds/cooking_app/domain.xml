@@ -12,9 +12,6 @@
       <assume_shared>
         <proposition predicate="current_recipe" value="omelette_recipe"/>
       </assume_shared>
-      <assume_shared>
-        <proposition predicate="which_ingredient" value="egg"/>
-      </assume_shared>
       <get_done action="whisk_eggs"/>
       <get_done action="heat_butter"/>
       <get_done action="add_eggs"/>
@@ -38,9 +35,24 @@
     </plan>
   </goal>
 
+  <goal type="perform" action="add_eggs">
+    <plan>
+      <get_done action="stir_eggs"/>
+      <signal_action_completion/>
+    </plan>
+  </goal>
+
+  <goal type="perform" action="preheat_oven">
+    <plan>
+      <get_done action="turn_knob"/>
+      <signal_action_completion/>
+    </plan>
+  </goal>
+
   <goal type="resolve" question_type="wh_question" predicate="amount_ingredient">
     <plan>
       <invoke_service_query type="wh_question" predicate="amount_ingredient"/>
+      <bind type="wh_question" predicate="which_ingredient"/>
     </plan>
   </goal>
 </domain>
