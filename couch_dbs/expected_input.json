@@ -1,6 +1,6 @@
 [
     {
-        "current_plan_item": "ask(?set([goal(perform(omelette_recipe_action)), goal(perform(fries_recipe_action))])",
+        "current_plan_item": "findout(?set([goal(perform(omelette_recipe_action)), goal(perform(fries_recipe_action))]))",
         "semantic_expression": "request(omelette_recipe_action)",
         "alternative": {
             "visual_information": [
@@ -18,7 +18,7 @@
         }
     },
     {
-        "current_plan_item": "ask(?set([goal(perform(omelette_recipe_action)), goal(perform(fries_recipe_action))])",
+        "current_plan_item": "findout(?set([goal(perform(omelette_recipe_action)), goal(perform(fries_recipe_action))]))",
         "semantic_expression": "request(fries_recipe_action)",
         "alternative": {
             "visual_information": [
