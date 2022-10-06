@@ -23,6 +23,7 @@
 
   <action name="omelette_recipe_action">
     <one-of>
+      <item>prepare a French omelette</item>
       <item>I want to prepare a French omelette</item>
       <item>I would like to do a French omelette</item>
       <item>a French omelette</item>
@@ -34,18 +35,13 @@
 
   <action name="fries_recipe_action">
     <one-of>
+      <item>make fries</item>
       <item>I want to make fries</item>
       <item>french fries</item>
       <item>chips</item>
       <item>Can you show me, how to make fries</item>
       <item>I would like to do fries</item>
       <item>baked potatoes</item>
-    </one-of>
-  </action>
-
-  <action name="how">
-    <one-of>
-      <item>how do I do that</item>
     </one-of>
   </action>
 

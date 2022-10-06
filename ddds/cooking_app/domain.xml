@@ -3,7 +3,10 @@
   <goal type="perform" action="top">
     <plan>
       <forget_all/>
-      <findout type="goal"/>
+      <findout type="alt_question">
+        <alt><perform action="omelette_recipe_action"/></alt>
+        <alt><perform action="fries_recipe_action"/></alt>
+      </findout>
     </plan>
   </goal>
 

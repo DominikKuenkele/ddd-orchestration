@@ -1,90 +1,36 @@
 [
     {
-        "current_plan_item": "findout(?X.example_predicate(X), set([example_predicate(individual_1), example_predicate(individual_2), example_predicate(individual_3)]))",
-        "semantic_expression": "answer(example_predicate(individual_1))",
+        "current_plan_item": "findout(?set([goal(perform(omelette_recipe_action)), goal(perform(fries_recipe_action))])",
+        "semantic_expression": "request(omelette_recipe_action)",
         "alternative": {
             "visual_information": [
                 {
                     "attribute": "name",
                     "type": "text/plain",
-                    "value": "Some text to show on the button"
+                    "value": "Omelette"
                 },
                 {
                     "attribute": "image",
                     "type": "image/jpeg",
-                    "value": "https://some-image-url"
+                    "value": "https://cdn.shopify.com/s/files/1/0959/3126/articles/IMG_7317_900x.jpg?v=1565647306"
                 }
             ]
         }
     },
     {
-        "current_plan_item": "findout(?X.example_predicate(X), set([example_predicate(individual_1), example_predicate(individual_2), example_predicate(individual_3)]))",
-        "semantic_expression": "answer(example_predicate(individual_2))",
+        "current_plan_item": "findout(?set([goal(perform(omelette_recipe_action)), goal(perform(fries_recipe_action))])",
+        "semantic_expression": "request(fries_recipe_action)",
         "alternative": {
             "visual_information": [
                 {
                     "attribute": "name",
                     "type": "text/plain",
-                    "value": "Some other text to show on the button"
+                    "value": "French Fries"
                 },
                 {
                     "attribute": "image",
                     "type": "image/jpeg",
-                    "value": "https://some-other-image-url"
-                }
-            ]
-        }
-    },
-    {
-        "current_plan_item": "findout(?X.example_predicate(X), set([example_predicate(individual_1), example_predicate(individual_2), example_predicate(individual_3)]))",
-        "semantic_expression": "answer(example_predicate(individual_3))",
-        "alternative": {
-            "visual_information": [
-                {
-                    "attribute": "name",
-                    "type": "text/plain",
-                    "value": "Another text to show on the button"
-                },
-                {
-                    "attribute": "image",
-                    "type": "image/jpeg",
-                    "value": "https://another-image-url"
-                }
-            ]
-        }
-    },
-    {
-        "current_plan_item": "findout(?set([goal(perform(example_action_1)), goal(perform(example_action_2))]))",
-        "semantic_expression": "request(example_action_1)",
-        "alternative": {
-            "visual_information": [
-                {
-                    "attribute": "name",
-                    "type": "text/plain",
-                    "value": "Button text"
-                },
-                {
-                    "attribute": "image",
-                    "type": "image/jpeg",
-                    "value": "https://image-url"
-                }
-            ]
-        }
-    },
-    {
-        "current_plan_item": "findout(?set([goal(perform(example_action_1)), goal(perform(example_action_2))]))",
-        "semantic_expression": "request(example_action_2)",
-        "alternative": {
-            "visual_information": [
-                {
-                    "attribute": "name",
-                    "type": "text/plain",
-                    "value": "Button text"
-                },
-                {
-                    "attribute": "image",
-                    "type": "image/jpeg",
-                    "value": "https://image-url"
+                    "value": "https://nypost.com/wp-content/uploads/sites/2/2018/08/istock-618214356.jpg?quality=75&strip=all&w=744"
                 }
             ]
         }

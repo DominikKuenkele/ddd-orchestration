@@ -1,5 +1,5 @@
 --- cooking french omelette
-S> What would you like to do?
+S> Do you want to prepare a French omelette or make fries?
 U> I want to prepare a French omelette
 S> Crack three eggs on a bowl and whisk with a pinch of salt.
 U> done
@@ -14,7 +14,7 @@ U> done
 S> Amazing! You have finished preparing a French omelette. Bon appétit!
 
 --- cooking french omelette (explicit question)
-S> What would you like to do?
+S> Do you want to prepare a French omelette or make fries?
 U> I want to prepare a French omelette
 S> Crack three eggs on a bowl and whisk with a pinch of salt.
 U> done
@@ -33,7 +33,7 @@ U> done
 S> Amazing! You have finished preparing a French omelette. Bon appétit!
 
 --- cooking french omelette (requesting help)
-S> What would you like to do?
+S> Do you want to prepare a French omelette or make fries?
 U> I want to prepare a French omelette
 S> Crack three eggs on a bowl and whisk with a pinch of salt.
 U> done
@@ -52,7 +52,7 @@ U> done
 S> Amazing! You have finished preparing a French omelette. Bon appétit!
 
 --- cooking fries
-S> What would you like to do?
+S> Do you want to prepare a French omelette or make fries?
 U> I want to make fries
 S> Preheat the oven to 230 degrees.
 U> done
@@ -67,7 +67,7 @@ U> done
 S> Good job! You should server and eat it as long as it is warm!
 
 --- cooking fries (explicit question)
-S> What would you like to do?
+S> Do you want to prepare a French omelette or make fries?
 U> I want to make fries
 S> Preheat the oven to 230 degrees.
 U> done
@@ -86,7 +86,7 @@ U> done
 S> Good job! You should server and eat it as long as it is warm!
 
 --- cooking fries (requesting help)
-S> What would you like to do?
+S> Do you want to prepare a French omelette or make fries?
 U> I want to make fries
 S> Preheat the oven to 230 degrees.
 U> How do I do that?

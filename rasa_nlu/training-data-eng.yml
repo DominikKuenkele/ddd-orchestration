@@ -3,6 +3,7 @@ version: "2.0"
 nlu:
 - intent: action::fries_recipe_action
   examples: |
+    - make fries
     - I want to make fries
     - french fries
     - chips
@@ -12,6 +13,7 @@ nlu:
 
 - intent: action::omelette_recipe_action
   examples: |
+    - prepare a French omelette
     - I want to prepare a French omelette
     - I would like to do a French omelette
     - a French omelette
