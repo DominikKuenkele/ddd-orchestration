@@ -1,5 +1,6 @@
-# Dialogue Systems 2 - ddd-orchestration
+# Dialogue Systems 2
+> Part of the Master in Language Technology at the University of Gothenburg
+>
+> **Course:** Dialogue Systems 2 (LT2319)
 
-Baseline orchestration files prepared for the Dialogue Systems 2 course in the Master in Language Technology of the University of Gothenburg.
-
-Students can fork this repository (changing the name to the name of the project or lab) or download a zip copy.
+Configuration of *TDM*.
